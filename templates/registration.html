@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Star Wars Universe</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous" defer>
+        </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+            crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+        <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" defer></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="/">Planet List</a>
+                <a class="navbar-brand" href="/registration">Registration</a>
+                <a class="navbar-brand" href="/login">Login</a>
+            </nav>
+            <h1>Registration</h1>
+            <form method="post">
+            {% if error_message %}
+            <div class="system-message">Error! {{ error_message }}</div>
+            {% endif %}
+            <ul>
+                <li><label for="username">Username</label></li>
+                <li><input minlength="3" id="username" type="text" name="user_name" value="{{ user_name }}" required></li>
+                <li><label for="password">Password</label></li>
+                <li><input minlength="5" id="password" type="password" name="password" required></li>
+                <li><label for="password2">Repeat password</label></li>
+                <li><input minlength="5" id="password2" type="password" name="password2" required></li>
+                <li><input type="submit" class="button" value="Do it!"></li>
+            </ul>
+            </form>
+    </body>
+</html>
