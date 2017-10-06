@@ -21,20 +21,17 @@
                 <a class="navbar-brand" href="/">Planet List</a>
                 <a class="navbar-brand" href="/registration">Registration</a>
                 <a class="navbar-brand" href="/login">Login</a>
-                <a class=navbar-dark id="username">Logged in as {{ username }}</a>
             </nav>
             <h1>Login</h1>
             <form method="post">
             {% if error_message %}
             <div class="system-message">Error! {{ error_message }}</div>
             {% endif %}
-                <ul>
                     <h2><label for="username">Username</label></h2>
-                    <li><input id="username" type="text" name="user_name" value="{{ user_name }}"></li>
-                    <li><label for="password">Password</label></li>
-                    <li><input id="password" type="password" name="password"></li>
-                    <li><input type="submit" class="button" value="Login"></li>
-                </ul>
+                    <p><input id="username" type="text" name="user_name" value="{{ user_name }}"></p>
+                    <h4><label for="password">Password</label></h4>
+                    <p><input id="password" type="password" name="password"></p>
+                    <p><input type="submit" class="button" value="Login"></p>
             </form>
         </div>
     </body>

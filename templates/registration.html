@@ -27,15 +27,15 @@
             {% if error_message %}
             <div class="system-message">Error! {{ error_message }}</div>
             {% endif %}
-            <ul>
-                <li><label for="username">Username</label></li>
-                <li><input minlength="3" id="username" type="text" name="user_name" value="{{ user_name }}" required></li>
-                <li><label for="password">Password</label></li>
-                <li><input minlength="5" id="password" type="password" name="password" required></li>
-                <li><label for="password2">Repeat password</label></li>
-                <li><input minlength="5" id="password2" type="password" name="password2" required></li>
-                <li><input type="submit" class="button" value="Do it!"></li>
-            </ul>
+            
+                <h2><label for="username">Username</label></h2>
+                <p><input minlength="3" id="username" type="text" name="user_name" value="{{ user_name }}" required></p>
+                <h4><label for="password">Password</label></h4>
+                <p><input minlength="5" id="password" type="password" name="password" required></p>
+                <h4><label for="password2">Repeat password</label></h4>
+                <p><input minlength="5" id="password2" type="password" name="password2" required></p>
+                <p><input type="submit" class="button" value="Do it!"></p>
+            
             </form>
     </body>
 </html>
